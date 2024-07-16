@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.dashboard.DashboardFragment">
+
+    <TextView
+        android:id="@+id/ingredients"
+        android:layout_width="310dp"
+        android:layout_height="369dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="51dp"
+        android:layout_marginBottom="103dp"
+        android:background="@drawable/border"
+        android:hint="@string/hint1"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/submit" />
+
+    <EditText
+        android:id="@+id/weight"
+        android:layout_width="151dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="49dp"
+        android:layout_marginEnd="221dp"
+        android:layout_marginBottom="13dp"
+        android:ems="10"
+        android:hint="@string/hint2"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/mesaure"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/mesaure"
+        android:layout_width="183dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginEnd="59dp"
+        android:layout_marginBottom="19dp"
+        app:layout_constraintBottom_toTopOf="@+id/ingrd"
+        app:layout_constraintEnd_toStartOf="@+id/listAdd"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weight" />
+
+    <Button
+        android:id="@+id/listAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="14dp"
+        android:text="@string/button1"
+        app:layout_constraintBottom_toTopOf="@+id/submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mesaure"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="86dp"
+        android:layout_height="49dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginBottom="40dp"
+        android:text="@string/hint4"
+        app:layout_constraintBottom_toTopOf="@+id/ingredients"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ingrd"
+        app:layout_constraintTop_toBottomOf="@+id/listAdd" />
+
+    <EditText
+        android:id="@+id/ingrd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="39dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="44dp"
+        android:ems="10"
+        android:hint="@string/hint3"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/ingredients"
+        app:layout_constraintEnd_toStartOf="@+id/submit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mesaure" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
